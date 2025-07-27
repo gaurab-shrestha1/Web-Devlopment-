@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Singha Devi School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+    }
+
+    body.dark {
+      background-color: #1a202c;
+      color: white;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 0.375rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .section {
+      padding: 5rem 1rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dark .card {
+      background-color: #374151;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      background-color: white;
+      transition: border-color 0.3s ease;
+    }
+
+    .dark .input-field {
+      background-color: #374151;
+      border-color: #4b5563;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow z-50 dark:bg-gray-800">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 py-3">
+      <h1 class="text-2xl font-bold">Singha Devi School</h1>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#hero" class="hover:text-blue-500">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-500">About</a></li>
+        <li><a href="#admission" class="hover:text-blue-500">Admission</a></li>
+        <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
+        <li><a href="#notices" class="hover:text-blue-500">Notice</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+      <button id="toggleMode" class="ml-4 p-2 bg-gray-200 rounded dark:bg-gray-600">🌓</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="h-screen flex items-center justify-center bg-blue-100 text-center px-4" data-aos="fade-up">
+    <div>
+      <h2 class="text-4xl font-bold mb-4">Welcome to Singha Devi School</h2>
+      <p class="mb-6">Empowering students for a brighter future through excellence in education.</p>
+      <a href="#admission" class="btn-primary">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section bg-white dark:bg-gray-900" data-aos="fade-right">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="text-lg leading-relaxed">
+        Singha Devi School, located in Damak, Nepal, is dedicated to providing quality education
+        in a nurturing and disciplined environment. With a focus on academic excellence and holistic development,
+        we ensure that every student shines in their unique way.
+      </p>
+    </div>
+  </section>
+
+  <!-- Admission -->
+  <section id="admission" class="section bg-gray-100 dark:bg-gray-800" data-aos="fade-left">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Admission Form</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <input type="text" name="name" required placeholder="Full Name" class="input-field" />
+        <input type="email" name="email" required placeholder="Email Address" class="input-field" />
+        <textarea name="message" required placeholder="Why do you want to join us?" class="input-field"></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section bg-white dark:bg-gray-900" data-aos="zoom-in">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 1" />
+        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 2" />
+        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 3" />
+        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice Board -->
+  <section id="notices" class="section bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Notice Board</h2>
+      <ul id="noticeList" class="space-y-4"></ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-white dark:bg-gray-900" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p class="mb-4">Location: Damak, Jhapa, Nepal</p>
+      <iframe class="w-full h-64 mb-6" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." allowfullscreen></iframe>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Your Name" class="input-field" required />
+        <input type="email" name="email" placeholder="Your Email" class="input-field" required />
+        <textarea name="message" placeholder="Your Message" class="input-field" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 text-center">
+    <p>&copy; 2025 Singha Devi School. All rights reserved.</p>
+    <div class="mt-2 space-x-4">
+      <a href="#" class="hover:text-blue-400">Facebook</a>
+      <a href="#" class="hover:text-blue-400">Instagram</a>
+      <a href="#" class="hover:text-blue-400">YouTube</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById("toggleMode").onclick = () => {
+      document.body.classList.toggle("dark");
+    };
+
+    const notices = [
+      "📢 School reopens on August 1st.",
+      "🎉 Congratulations to SEE Toppers!",
+      "📝 Entrance exam: July 29 at 10 AM.",
+      "📅 Parents meeting: July 30, 3 PM."
+    ];
+
+    const list = document.getElementById("noticeList");
+    notices.forEach(notice => {
+      const li = document.createElement("li");
+      li.className = "card";
+      li.textContent = notice;
+      list.appendChild(li);
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
