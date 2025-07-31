@@ -1,199 +1,1215 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Singha Devi School</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-    }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
 
-    body.dark {
-      background-color: #1a202c;
-      color: white;
-    }
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 0.375rem;
-      transition: background-color 0.3s ease;
-    }
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    .btn-primary:hover {
-      background-color: var(--primary-dark);
-    }
-
-    .section {
-      padding: 5rem 1rem;
-    }
-
-    .card {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .dark .card {
-      background-color: #374151;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .input-field {
-      width: 100%;
-      padding: 0.5rem 1rem;
-      border: 1px solid #d1d5db;
-      border-radius: 0.375rem;
-      background-color: white;
-      transition: border-color 0.3s ease;
-    }
-
-    .dark .input-field {
-      background-color: #374151;
-      border-color: #4b5563;
-    }
-
-    .input-field:focus {
-      border-color: var(--primary);
-      outline: none;
-    }
-  </style>
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="font-sans bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-  <!-- Navbar -->
-  <header class="sticky top-0 bg-white shadow z-50 dark:bg-gray-800">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto px-4 py-3">
-      <h1 class="text-2xl font-bold">Singha Devi School</h1>
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="#hero" class="hover:text-blue-500">Home</a></li>
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#admission" class="hover:text-blue-500">Admission</a></li>
-        <li><a href="#gallery" class="hover:text-blue-500">Gallery</a></li>
-        <li><a href="#notices" class="hover:text-blue-500">Notice</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
-      <button id="toggleMode" class="ml-4 p-2 bg-gray-200 rounded dark:bg-gray-600">🌓</button>
-    </nav>
-  </header>
+<body>
 
-  <!-- Hero -->
-  <section id="hero" class="h-screen flex items-center justify-center bg-blue-100 text-center px-4" data-aos="fade-up">
-    <div>
-      <h2 class="text-4xl font-bold mb-4">Welcome to Singha Devi School</h2>
-      <p class="mb-6">Empowering students for a brighter future through excellence in education.</p>
-      <a href="#admission" class="btn-primary">Apply Now</a>
-    </div>
-  </section>
+  <!--
+    - #MAIN
+  -->
 
-  <!-- About -->
-  <section id="about" class="section bg-white dark:bg-gray-900" data-aos="fade-right">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">About Us</h2>
-      <p class="text-lg leading-relaxed">
-        Singha Devi School, located in Damak, Nepal, is dedicated to providing quality education
-        in a nurturing and disciplined environment. With a focus on academic excellence and holistic development,
-        we ensure that every student shines in their unique way.
-      </p>
-    </div>
-  </section>
+  <main>
 
-  <!-- Admission -->
-  <section id="admission" class="section bg-gray-100 dark:bg-gray-800" data-aos="fade-left">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Admission Form</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
-        <input type="text" name="name" required placeholder="Full Name" class="input-field" />
-        <input type="email" name="email" required placeholder="Email Address" class="input-field" />
-        <textarea name="message" required placeholder="Why do you want to join us?" class="input-field"></textarea>
-        <button type="submit" class="btn-primary">Submit</button>
-      </form>
-    </div>
-  </section>
+    <!--
+      - #SIDEBAR
+    -->
 
-  <!-- Gallery -->
-  <section id="gallery" class="section bg-white dark:bg-gray-900" data-aos="zoom-in">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6 text-center">Gallery</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 1" />
-        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 2" />
-        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 3" />
-        <img src="https://via.placeholder.com/300" class="rounded hover:scale-105 transition" alt="Event 4" />
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Gaurab Shrestha </h1>
+
+          <p class="title">Python & Thumbnail designer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
       </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">gaurabpc7@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">970703737</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">october 17, 2009</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Damak, Jhapa, Nepal </address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm Gaurab Shrestha — a curious mind, code whisperer, and content alchemist from Nepal. 
+            A science student by day and digital creator by night, I blend logic, creativity, and ambition to craft ideas that speak, solve, and spark.
+             Future data scientist in the making. Let’s shape tomorrow.
+      
+    
+          </p>
+
+          <p>
+             I build with code, create with vision, and teach with clarity.
+             From Python scripts to viral edits, smart content to sharp ideas —
+             I craft solutions that work, wow, and win.
+                  
+            
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Thumbnail design</h4>
+
+                <p class="service-item-text">
+                  Creates creative and attractie Thumbnail
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Creative content idea devloper</h4>
+
+                <p class="service-item-text">
+                  With creative mindset , I prepare conntent ideas 
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Abhimanyu Chapagain</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                     "Gaurab is a rare blend of creativity, intelligence, and dedication.
+                      Whether it's coding, content creation, or problem-solving — he delivers with precision and passion.
+                       Working with him is not just productive, it’s inspiring."                    
+                                     
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Sita Neupane </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "Gaurab has an exceptional ability to turn ideas into reality.
+                     His technical skills, creative mindset, and consistent drive make him stand out. 
+                     He’s not just a learner — he’s a leader in the making."                   
+                                        
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>— Regina Parsai, Deputy Mayor </h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "Gaurab Shrestha's creative content has played a significant role in highlighting the progress and potential of our municipality.
+                     His innovative visuals and storytelling have not only increased public engagement but have also brought a fresh digital identity to our community. 
+                     It’s rare to find such a young talent with both vision and dedication.
+                      I wholeheartedly commend his contribution."
+                                                                              
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Subash Dahal</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                     "Gaurab designed a thumbnail for one of my presentations, 
+                     and I was genuinely impressed by the quality and creativity.
+                      He understood the vision instantly and delivered exactly what I needed — clean, engaging, and professional.
+                       A very promising talent."
+                    
+                    
+                
+                    
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Pramod Aryal</h4>
+
+              <time datetime="2021-06-14">14 Jan, 20025</time>
+
+              <div data-modal-text>
+                <p> 
+                    "Gaurab helped me with a Python program, and I was truly impressed by his problem-solving skills and speed.
+                     He explained everything clearly and delivered a working solution that exceeded my expectations.
+                      He’s definitely ahead of his age."              
+                
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">JMES>
+
+              <span>2011 — 20024</span>
+
+              <p class="timeline-text">
+                JMES School has grown remarkably from 2011 to 2024,
+                 evolving from a small institution into a leading academic center known for quality education, innovation, and student excellence.                
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title"> JMES Collage >
+
+              <span>2024-2026</span>
+
+              <p class="timeline-text">
+                JMES college life from 2024 to 2026 has been a vibrant journey of academic growth and self-discovery. 
+                It nurtured students with quality education, practical skills, and unforgettable memories
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Self Study in skill</h4>
+
+              <span>2024-∞</span>
+
+              <p class="timeline-text">
+               From 2024 onward, I dedicated myself to self-learning key digital skills like web development, thumbnail design, and Python programming.
+                Through online courses, hands-on projects, and consistent practice, I built a strong foundation in each area.
+                 This self-driven journey has significantly enhanced my creative and technical abilities, preparing me for real-world challenges.
+
+                                
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Python Oops</h4>
+
+              <span>2024 — Present</span>
+
+              <p class="timeline-text">
+                I have hands-on experience in Python’s Object-Oriented Programming (OOP),
+                 working with concepts like classes, objects, inheritance, encapsulation, and polymorphism.
+                  This knowledge has enabled me to write clean, modular, and scalable code for real-world applications
+                
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">creative content devloper</h4>
+
+              <span>2024 — present</span>
+
+              <p class="timeline-text">
+                With experience in content creation across platforms, 
+                I’ve developed a strong eye for design, storytelling, and audience engagement. 
+                I've crafted thumbnails, videos, and posts that have boosted visibility and sparked interest. 
+                This creative journey has sharpened my skills in visual communication and digital strategy.
+
+                
+                
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Thubnail creation </h4>
+
+              <span>2024 — present</span>
+
+              <p class="timeline-text">
+                 I have hands-on experience in designing eye-catching thumbnails that drive clicks and viewer engagement.
+                  Using tools like Photoshop and Canva, I focus on bold visuals, clear text, and strategic color choices to match content themes.
+                   My designs have contributed to higher reach and viewer retention across YouTube and social media platforms.
+
+                
+                
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Creative cotent devloper</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WebDevlopment</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="" alt="" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23"></time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
+
+                  <p class="blog-text">
+                    
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sample of Thumbnail</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Youtube thumbnail</h3>
+
+                  <p class="blog-text">
+                    
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category"></p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2025-01-27">2025-01-27</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title"></h3>
+
+                  <p class="blog-text">
+                    
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Feb 23, 2025</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title"> Something </h3>
+
+                  <p class="blog-text">
+                    
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">aug 13, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Creative Art</h3>
+
+                  <p class="blog-text">
+                     Abstract Art , understand according to your level
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">You guess </p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">oct 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">YOU</h3>
+
+                  <p class="blog-text">
+                    
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://maps.google.com/?q=26.65941,87.68685"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
-  </section>
 
-  <!-- Notice Board -->
-  <section id="notices" class="section bg-gray-100 dark:bg-gray-800" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">Notice Board</h2>
-      <ul id="noticeList" class="space-y-4"></ul>
-    </div>
-  </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact" class="section bg-white dark:bg-gray-900" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-      <p class="mb-4">Location: Damak, Jhapa, Nepal</p>
-      <iframe class="w-full h-64 mb-6" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!..." allowfullscreen></iframe>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" class="input-field" required />
-        <input type="email" name="email" placeholder="Your Email" class="input-field" required />
-        <textarea name="message" placeholder="Your Message" class="input-field" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 text-center">
-    <p>&copy; 2025 Singha Devi School. All rights reserved.</p>
-    <div class="mt-2 space-x-4">
-      <a href="#" class="hover:text-blue-400">Facebook</a>
-      <a href="#" class="hover:text-blue-400">Instagram</a>
-      <a href="#" class="hover:text-blue-400">YouTube</a>
-    </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script>
-    document.getElementById("toggleMode").onclick = () => {
-      document.body.classList.toggle("dark");
-    };
 
-    const notices = [
-      "📢 School reopens on August 1st.",
-      "🎉 Congratulations to SEE Toppers!",
-      "📝 Entrance exam: July 29 at 10 AM.",
-      "📅 Parents meeting: July 30, 3 PM."
-    ];
 
-    const list = document.getElementById("noticeList");
-    notices.forEach(notice => {
-      const li = document.createElement("li");
-      li.className = "card";
-      li.textContent = notice;
-      list.appendChild(li);
-    });
-  </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
